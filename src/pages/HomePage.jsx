@@ -677,7 +677,7 @@ export default function HomePage({ lang, onNavigate }) {
               target="_blank" 
               rel="noreferrer" 
               className="text-cyan-400 hover:underline font-mono">
-              @saz7771 (Telegram)
+              {lang === 'en' ? 'Direct Telegram Support' : 'Прямий зв’язок у Telegram'}
             </a>
           </div>
 

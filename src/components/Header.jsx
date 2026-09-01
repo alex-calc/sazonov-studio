@@ -70,7 +70,7 @@ export default function Header({ lang, setLang, currentPath, onNavigate }) {
             rel="noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs tracking-wide transition-all shadow-lg shadow-cyan-500/20">
             <Send className="w-3.5 h-3.5" />
-            <span>@saz7771</span>
+            <span>{lang === 'en' ? 'Chat on Telegram' : 'Написати в Telegram'}</span>
           </a>
         </div>
 
