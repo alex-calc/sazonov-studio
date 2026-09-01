@@ -397,16 +397,15 @@ export default function QRScannerPage({ lang, onNavigate }) {
 
             {/* Right: High-Res Real Screenshot Frame */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="relative w-full max-w-[520px] rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950 group">
+              <div className="relative w-full max-w-[520px] h-[360px] sm:h-[400px] flex items-center justify-center p-3 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl bg-[#020617] group">
                 <img 
                   src={t.steps[activeStep].img} 
                   alt={t.steps[activeStep].title} 
-                  className="w-full h-auto max-h-[380px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="max-h-full max-w-full object-contain rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-3 left-4 right-4 text-xs font-mono text-cyan-300 flex items-center justify-between">
-                  <span>📷 Real Screen Capture</span>
-                  <span className="text-slate-400">{t.steps[activeStep].badge}</span>
+                <div className="absolute bottom-2 left-4 right-4 text-[11px] font-mono text-cyan-400 bg-slate-950/80 px-3 py-1 rounded-md border border-slate-800 flex items-center justify-between pointer-events-none">
+                  <span>📷 Real Field Capture</span>
+                  <span className="text-slate-300 font-bold">{t.steps[activeStep].badge}</span>
                 </div>
               </div>
             </div>
