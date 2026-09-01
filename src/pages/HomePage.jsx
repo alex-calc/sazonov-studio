@@ -338,68 +338,83 @@ export default function HomePage({ lang, onNavigate }) {
           </p>
         </div>
 
-        {/* Step Navigation Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {/* Step Navigation Tabs (Compact & Responsive) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
           {t.steps.map((s, idx) => (
             <button 
               key={idx}
               onClick={() => setActiveStep(idx)}
-              className={`p-4 rounded-2xl border text-left transition-all ${
+              className={`p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border text-left transition-all ${
                 activeStep === idx 
-                  ? 'bg-slate-800/90 border-cyan-500 shadow-lg shadow-cyan-500/15' 
+                  ? 'bg-slate-800/95 border-cyan-500 shadow-lg shadow-cyan-500/20 ring-1 ring-cyan-500/40' 
                   : 'glass-panel border-white/5 hover:border-slate-700 opacity-70 hover:opacity-100'
               }`}>
-              <div className="text-xs font-mono font-bold text-cyan-400 mb-1">{s.step}</div>
-              <div className="text-sm font-bold text-white truncate">{s.title.split('(')[0]}</div>
+              <div className="text-[10px] sm:text-xs font-mono font-bold text-cyan-400 mb-0.5 sm:mb-1">{s.step}</div>
+              <div className="text-xs sm:text-sm font-bold text-white truncate">{s.tab || s.title.split('(')[0]}</div>
             </button>
           ))}
         </div>
 
-        {/* Active Step Showcase Card */}
-        <div className="glass-panel p-6 sm:p-10 rounded-[32px] border border-cyan-500/30 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Active Step Showcase Card (Mobile-First Visual Flow) */}
+        <div className="glass-panel p-4 sm:p-8 lg:p-10 rounded-2xl sm:rounded-[32px] border border-cyan-500/30 relative overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             
-            {/* Left: Text Description & Bullets */}
-            <div className="lg:col-span-6 space-y-5">
+            {/* Content Column */}
+            <div className="lg:col-span-6 space-y-4">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-extrabold px-3 py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+                <span className="text-[11px] sm:text-xs font-mono font-extrabold px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-500/30">
                   {t.steps[activeStep].step}
                 </span>
-                <span className="text-xs font-mono font-bold px-3 py-1 rounded-md bg-slate-800 text-slate-300">
+                <span className="text-[11px] sm:text-xs font-mono font-bold px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md bg-slate-800 text-slate-300">
                   {t.steps[activeStep].badge}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white leading-snug">
                 {t.steps[activeStep].title}
               </h3>
 
-              <p className="text-base text-slate-300 leading-relaxed">
+              {/* 📱 Mobile-Only Screenshot Preview: Displayed directly under title on smartphones! */}
+              <div className="block lg:hidden my-3">
+                <div className="relative w-full h-[220px] sm:h-[280px] flex items-center justify-center p-2 rounded-xl overflow-hidden border border-cyan-500/30 shadow-xl bg-[#020617]">
+                  <img 
+                    src={t.steps[activeStep].img} 
+                    alt={t.steps[activeStep].title} 
+                    className="max-h-full max-w-full object-contain rounded-lg shadow-md"
+                  />
+                  <div className="absolute bottom-1.5 left-2 right-2 text-[10px] font-mono text-cyan-400 bg-slate-950/85 px-2 py-0.5 rounded border border-slate-800 flex items-center justify-between pointer-events-none">
+                    <span>📷 Real Field Capture</span>
+                    <span className="text-slate-300 font-bold">{t.steps[activeStep].badge}</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm lg:text-base text-slate-300 leading-relaxed">
                 {t.steps[activeStep].desc}
               </p>
 
-              <div className="space-y-2.5 pt-2">
+              <div className="space-y-2 pt-1">
                 {t.steps[activeStep].features.map((feat, fi) => (
-                  <div key={fi} className="flex items-center gap-2.5 text-sm text-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <div key={fi} className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" />
                     <span>{feat}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4 flex items-center gap-3">
+              <div className="pt-2 flex items-center gap-3">
                 <button 
                   onClick={() => onNavigate('/plugins/quick-qr-scanner')}
-                  className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-xs flex items-center gap-2 transition-all shadow-lg shadow-cyan-500/20">
+                  className="w-full sm:w-auto px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-xs flex items-center justify-center gap-2 transition-all shadow-lg shadow-cyan-500/20">
                   <span>{lang === 'en' ? 'Open Full Scanner Page' : 'Детальна сторінка плагіну'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>
 
-            {/* Right: High-Res Real Screenshot Frame */}
-            <div className="lg:col-span-6 flex justify-center">
-              <div className="relative w-full max-w-[520px] h-[360px] sm:h-[400px] flex items-center justify-center p-3 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl bg-[#020617] group">
+            {/* 💻 Desktop-Only Screenshot Frame (Side-by-Side) */}
+            <div className="hidden lg:flex lg:col-span-6 justify-center">
+              <div className="relative w-full max-w-[520px] h-[380px] flex items-center justify-center p-3 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl bg-[#020617] group">
                 <img 
                   src={t.steps[activeStep].img} 
                   alt={t.steps[activeStep].title} 
