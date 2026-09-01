@@ -10,16 +10,17 @@ import {
   MessageSquare, 
   Terminal, 
   Lock, 
-  ChevronRight,
-  ShieldCheck,
-  Check,
-  ArrowRight,
-  Sparkles,
-  CheckCircle2
+  ChevronRight, 
+  ShieldCheck, 
+  Check, 
+  ArrowRight, 
+  Sparkles, 
+  CheckCircle2 
 } from '../components/Icons';
 
 export default function HomePage({ lang, onNavigate }) {
   const [submitted, setSubmitted] = useState(false);
+  const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState({ name: '', contact: '', service: 'Quick QR Ticket Scanner Pro Setup', details: '' });
 
   const handleFormSubmit = (e) => {
@@ -45,6 +46,42 @@ export default function HomePage({ lang, onNavigate }) {
           { label: "Hardware Support", value: "iOS / Android" }
         ]
       },
+      workflowTitle: "How It Works: 4-Step Access Automation",
+      workflowSubtitle: "From selling tickets online to instant duplicate fraud alarm at the door.",
+      steps: [
+        {
+          step: "STEP 1",
+          title: "Issue & Sell Tickets (WP Admin & WooCommerce)",
+          desc: "Customer buys a ticket on WooCommerce or manager generates a VIP pass manually (e.g. Elon Musk, 50 EUR). The plugin creates a unique SVG QR code and dispatches a branded email pass.",
+          badge: "WordPress Admin",
+          img: "/step1_admin.jpg",
+          features: ["WooCommerce order auto-hook", "Manual VIP ticket generator", "Dynamic live status ledger (🟢 Valid / 🔴 Used)"]
+        },
+        {
+          step: "STEP 2",
+          title: "Gate Check-In (Bouncer Smartphone)",
+          desc: "Security bouncer opens a private web link on any phone. Screen Wake Lock keeps the screen continuously on. Scanning takes under 1 second: emerald 'ACCESS GRANTED' hologram + sound chime.",
+          badge: "0 App Downloads",
+          img: "/step2_scan_success.jpg",
+          features: ["Always-on W3C Screen Wake Lock", "Cyberpunk laser reticle HUD", "Auto-rearms in 2.5s for next guest"]
+        },
+        {
+          step: "STEP 3",
+          title: "Anti-Fraud Duplicate Detection",
+          desc: "If a guest screenshots or forwards their QR ticket to friends, the second scan triggers a full-screen RED warning shield, vibration, and loud security alarm. The ticket cannot be reused.",
+          badge: "Security Alarm",
+          img: "/step3_scan_alarm.jpg",
+          features: ["Exact previous entry timestamp", "Full-screen red visual alert", "Haptic vibration + audio siren"]
+        },
+        {
+          step: "STEP 4",
+          title: "Instant Telegram Push Notifications",
+          desc: "Organizer receives instant real-time Telegram messages in their pocket: new ticket sales, live entrance check-ins, and immediate alarm alerts with the duplicate code.",
+          badge: "Live Pocket Alerts",
+          img: "/step4_telegram.jpg",
+          features: ["Issued ticket notification with price", "Gate check-in confirmation", "Security alarm push with guest name"]
+        }
+      ],
       productsTitle: "Commercial Plugin Suite",
       productsSubtitle: "Each plugin features dedicated architectural documentation, live test sandboxes, and clean PHP 8.3 & React codebases.",
       products: [
@@ -130,6 +167,42 @@ export default function HomePage({ lang, onNavigate }) {
           { label: "Підтримка пристроїв", value: "iOS / Android" }
         ]
       },
+      workflowTitle: "Як це працює: 4 прості кроки",
+      workflowSubtitle: "Зрозуміло і надійно: від продажу квитка на сайті до захисту від зайців на вході та звітів у Telegram.",
+      steps: [
+        {
+          step: "КРОК 1",
+          title: "Виписка або продаж квитка (Адмінка WP та WooCommerce)",
+          desc: "Клієнт купує квиток на сайті через WooCommerce або адміністратор створює VIP-проходку вручну (наприклад, Elon Musk, 50 EUR). Плагін миттєво генерує унікальний захищений SVG QR-код та надсилає квиток на email.",
+          badge: "Панель WordPress",
+          img: "/step1_admin.jpg",
+          features: ["Автоматична видача при оплаті", "Форма ручного створення VIP-гостей", "Жива таблиця статусів (🟢 Valid / 🔴 Used)"]
+        },
+        {
+          step: "КРОК 2",
+          title: "Контроль на вході (Смартфон охорони)",
+          desc: "Охоронець відкриває секретне посилання в Safari або Chrome. Екран не засинає (W3C Wake Lock). Сканування займає менше 1 секунди: загоряється смарагдовий щит 'ПРОХІД ДОЗВОЛЕНО' та лунає приємний звук.",
+          badge: "0 МБ додатків",
+          img: "/step2_scan_success.jpg",
+          features: ["Незасинаючий екран охорони", "Лазерний приціл HUD", "Авто-готовність через 2.5с до наступного гостя"]
+        },
+        {
+          step: "КРОК 3",
+          title: "Захист від дублікатів та пересилки скріншотів",
+          desc: "Якщо гість переслав скріншот свого квитка другу — при повторній спробі сканування телефон охорони спалахує червоним кольором, вмикається сирена тривоги та вібрація. Повторний вхід заблоковано!",
+          badge: "Сирена безпеки",
+          img: "/step3_scan_alarm.jpg",
+          features: ["Фіксація точного часу першого входу", "Повноекранне червоне попередження", "Звукова сирена тривоги"]
+        },
+        {
+          step: "КРОК 4",
+          title: "Миттєві сповіщення в Telegram організатора",
+          desc: "Організатор заходу отримує всі дані прямо в кишеню: виписані квитки з ціною, сповіщення про кожен успішний вхід та термінову тривогу при спробі пройти по дублікату.",
+          badge: "Пуші в Telegram",
+          img: "/step4_telegram.jpg",
+          features: ["Сповіщення про продані квитки", "Звіт про прохід гостя на вході", "Сигнал тривоги з ім'ям гостя та кодом"]
+        }
+      ],
       productsTitle: "Комерційна Лінійка Плагінів",
       productsSubtitle: "Для кожного плагіна ми створюємо окрему сторінку з детальною архітектурою, живими демо та чистим кодом PHP 8.3.",
       products: [
@@ -247,6 +320,100 @@ export default function HomePage({ lang, onNavigate }) {
               <div className="text-xs text-slate-400 font-medium">{m.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 🌟 4-STEP VISUAL STORYBOARD TOUR (Real Screenshots & Step-by-Step Breakdown) */}
+      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950 text-cyan-400 text-xs font-mono font-bold border border-cyan-500/30 mb-3">
+            <Layers className="w-3.5 h-3.5" />
+            <span>HOW IT WORKS</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            {t.workflowTitle}
+          </h2>
+          <p className="text-base text-slate-400 mt-2">
+            {t.workflowSubtitle}
+          </p>
+        </div>
+
+        {/* Step Navigation Tabs */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {t.steps.map((s, idx) => (
+            <button 
+              key={idx}
+              onClick={() => setActiveStep(idx)}
+              className={`p-4 rounded-2xl border text-left transition-all ${
+                activeStep === idx 
+                  ? 'bg-slate-800/90 border-cyan-500 shadow-lg shadow-cyan-500/15' 
+                  : 'glass-panel border-white/5 hover:border-slate-700 opacity-70 hover:opacity-100'
+              }`}>
+              <div className="text-xs font-mono font-bold text-cyan-400 mb-1">{s.step}</div>
+              <div className="text-sm font-bold text-white truncate">{s.title.split('(')[0]}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Active Step Showcase Card */}
+        <div className="glass-panel p-6 sm:p-10 rounded-[32px] border border-cyan-500/30 relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left: Text Description & Bullets */}
+            <div className="lg:col-span-6 space-y-5">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono font-extrabold px-3 py-1 rounded-md bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+                  {t.steps[activeStep].step}
+                </span>
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-md bg-slate-800 text-slate-300">
+                  {t.steps[activeStep].badge}
+                </span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                {t.steps[activeStep].title}
+              </h3>
+
+              <p className="text-base text-slate-300 leading-relaxed">
+                {t.steps[activeStep].desc}
+              </p>
+
+              <div className="space-y-2.5 pt-2">
+                {t.steps[activeStep].features.map((feat, fi) => (
+                  <div key={fi} className="flex items-center gap-2.5 text-sm text-slate-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>{feat}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-4 flex items-center gap-3">
+                <button 
+                  onClick={() => onNavigate('/plugins/quick-qr-scanner')}
+                  className="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-xs flex items-center gap-2 transition-all shadow-lg shadow-cyan-500/20">
+                  <span>{lang === 'en' ? 'Open Full Scanner Page' : 'Детальна сторінка плагіну'}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Right: High-Res Real Screenshot Frame */}
+            <div className="lg:col-span-6 flex justify-center">
+              <div className="relative w-full max-w-[520px] rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950 group">
+                <img 
+                  src={t.steps[activeStep].img} 
+                  alt={t.steps[activeStep].title} 
+                  className="w-full h-auto max-h-[380px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-4 right-4 text-xs font-mono text-cyan-300 flex items-center justify-between">
+                  <span>📷 Real Screen Capture</span>
+                  <span className="text-slate-400">{t.steps[activeStep].badge}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
