@@ -1,3 +1,4 @@
+import InteractiveLiveDemo from '../components/InteractiveLiveDemo';
 import React, { useState } from 'react';
 import { 
   QrCode, 
@@ -322,6 +323,8 @@ export default function HomePage({ lang, onNavigate }) {
           ))}
         </div>
       </section>
+
+      <InteractiveLiveDemo lang={lang} />
 
       {/* 🌟 4-STEP VISUAL STORYBOARD TOUR (Real Screenshots & Step-by-Step Breakdown) */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">

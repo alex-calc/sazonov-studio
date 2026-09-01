@@ -1,3 +1,4 @@
+import InteractiveLiveDemo from '../components/InteractiveLiveDemo';
 import React, { useState } from 'react';
 import { 
   ShieldCheck, 
@@ -320,6 +321,8 @@ export default function QRScannerPage({ lang, onNavigate }) {
           ))}
         </div>
       </div>
+
+      <InteractiveLiveDemo lang={lang} />
 
       {/* 🌟 4-STEP VISUAL STORYBOARD TOUR (Screenshots & Step-by-Step Breakdown) */}
       <div className="mb-24">
