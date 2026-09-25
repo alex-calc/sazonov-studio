@@ -87,9 +87,19 @@ export default function HomePage({ lang, onNavigate }) {
       productsSubtitle: "Each plugin features dedicated architectural documentation, live test sandboxes, and clean PHP 8.3 & React codebases.",
       products: [
         {
+          id: "sazcod-confirmation",
+          name: "SazCOD – COD Order Confirmation for WooCommerce",
+          badge: "Published on WordPress.org (v1.0.2)",
+          badgeColor: "emerald",
+          category: "E-Commerce Fraud Defense",
+          desc: "Eliminate fake Cash on Delivery orders and slash shipping return fees by up to 85%. Automated 1-click cryptographic confirmation links with native WooCommerce HPOS state machine.",
+          price: "$49 / year",
+          link: "/plugins/sazcod-order-confirmation"
+        },
+        {
           id: "quick-qr-scanner",
-          name: "Quick QR Ticket Scanner & Gate Pass Pro",
-          badge: "Ready v2.0.0",
+          name: "SazTicket – Event Ticket Check-in & Scanner",
+          badge: "Published on WordPress.org (v2.1.1)",
           badgeColor: "emerald",
           category: "Events & Access Control",
           desc: "Full-cycle digital entry control with mobile laser viewfinder, W3C Screen Wake Lock, instant Telegram gate check-ins, and anti-counterfeit ledger.",
@@ -98,33 +108,33 @@ export default function HomePage({ lang, onNavigate }) {
         },
         {
           id: "messenger-dispatcher",
-          name: "Instant Messenger Order Dispatcher Pro",
-          badge: "Releasing Sept 15",
+          name: "Quick Order Notifier Telegram (SazTelegram)",
+          badge: "Releasing Early Oct",
           badgeColor: "cyan",
-          category: "E-Commerce Automation",
-          desc: "Automated WooCommerce order dispatching directly to Telegram & WhatsApp with interactive 1-click status change buttons and courier routing.",
+          category: "Telegram Automation",
+          desc: "Automated WooCommerce order dispatching directly to Telegram with interactive 1-click status change buttons and courier routing.",
           price: "$39 / year",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         },
         {
           id: "deposit-payments",
           name: "Self-Hosted Partial Deposit & Booking Payments",
-          badge: "Releasing Oct 1",
+          badge: "In Research",
           badgeColor: "purple",
           category: "Fintech & Bookings",
           desc: "Eliminate 5% SaaS booking fees. Direct partial deposit and balance collection with Stripe, Apple Pay, PayPal & Monobank.",
           price: "$59 / year",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         },
         {
           id: "volume-discounts",
           name: "Smart Tiered B2B Volume Discount Table",
-          badge: "Releasing Oct 15",
+          badge: "In Research",
           badgeColor: "amber",
           category: "B2B Wholesale",
           desc: "Dynamic live tier pricing matrix on product pages with instant AJAX subtotal recalculation for wholesale bulk orders.",
           price: "$45 / year",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         }
       ],
       servicesTitle: "Turnkey Studio Development Services",
@@ -208,9 +218,19 @@ export default function HomePage({ lang, onNavigate }) {
       productsSubtitle: "Для кожного плагіна ми створюємо окрему сторінку з детальною архітектурою, живими демо та чистим кодом PHP 8.3.",
       products: [
         {
+          id: "sazcod-confirmation",
+          name: "SazCOD – Підтвердження післяплати для WooCommerce",
+          badge: "Опубліковано на WordPress.org (v1.0.2)",
+          badgeColor: "emerald",
+          category: "Захист від фейкових замовлень",
+          desc: "Скоротіть збитки від неробочих замовлень з накладеним платежем до 85%. Автоматичне 1-клік підтвердження покупцем через захищені посилання, Anti-Replay захист та підтримка WooCommerce HPOS.",
+          price: "$49 / рік",
+          link: "/plugins/sazcod-order-confirmation"
+        },
+        {
           id: "quick-qr-scanner",
-          name: "Quick QR Ticket Scanner & Gate Pass Pro",
-          badge: "Готово v2.0.0",
+          name: "SazTicket – Сканер квитків та реєстрація подій",
+          badge: "Опубліковано на WordPress.org (v2.1.1)",
           badgeColor: "emerald",
           category: "Події та Контроль Входу",
           desc: "Повний цикл цифрового контролю входу з лазерним прицілом, незасинаючим екраном Screen Wake Lock та миттєвими звітами у Telegram.",
@@ -219,33 +239,33 @@ export default function HomePage({ lang, onNavigate }) {
         },
         {
           id: "messenger-dispatcher",
-          name: "Instant Messenger Order Dispatcher Pro",
-          badge: "Реліз 15 вересня",
+          name: "Quick Order Notifier Telegram (SazTelegram)",
+          badge: "Реліз на початку жовтня",
           badgeColor: "cyan",
-          category: "E-Commerce Автоматизація",
-          desc: "Автоматична відправка замовлень з WooCommerce у Telegram та WhatsApp з інтерактивними кнопками зміни статусів.",
+          category: "Telegram Автоматизація",
+          desc: "Миттєва відправка структурованих сповіщень про нові замовлення у Telegram з інтерактивними кнопками зміни статусів.",
           price: "$39 / рік",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         },
         {
           id: "deposit-payments",
           name: "Self-Hosted Partial Deposit & Booking Payments",
-          badge: "Реліз 1 жовтня",
+          badge: "У дослідженні",
           badgeColor: "purple",
           category: "Фінтех та Бронювання",
           desc: "Економія 5% комісій сторонніх сервісів. Прийом передоплати та решти через Stripe, Apple Pay, PayPal та Monobank.",
           price: "$59 / рік",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         },
         {
           id: "volume-discounts",
           name: "Smart Tiered B2B Volume Discount Table",
-          badge: "Реліз 15 жовтня",
+          badge: "У дослідженні",
           badgeColor: "amber",
           category: "B2B Опт",
           desc: "Динамічна таблиця оптових знижок на сторінці товару з миттєвим AJAX-перерахунком вартості партії.",
           price: "$45 / рік",
-          link: "/plugins/quick-qr-scanner"
+          link: "#"
         }
       ],
       servicesTitle: "Послуги Студії Під Ключ",
@@ -434,19 +454,87 @@ export default function HomePage({ lang, onNavigate }) {
         </div>
       </section>
 
-      {/* Flagship Showroom Preview Section with Video */}
-      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+      {/* Flagship Showroom Preview Section - SazCOD */}
+      <section className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div className="glass-panel p-8 sm:p-12 rounded-[36px] border border-emerald-500/30 bg-gradient-to-br from-[#041d14]/40 via-[#020617] to-[#041d14]/20 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-950 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
+                <Sparkles className="w-4 h-4" />
+                <span>🎉 NEW RELEASE • OFFICIAL WORDPRESS.ORG (v1.0.2) • 27+ DOWNLOADS TODAY</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                SazCOD – COD Order Confirmation for WooCommerce
+              </h2>
+
+              <p className="text-base text-slate-300 leading-relaxed">
+                {lang === 'en'
+                  ? 'Eliminate fake Cash on Delivery orders, protect warehouse inventory, and slash return shipping fees by up to 85%. Powered by 1-click cryptographic confirmation links, Anti-Replay token burn, and native WooCommerce HPOS integration.'
+                  : 'Захистіть свій інтернет-магазин від фейкових замовлень та відмов від післяплати на пошті. Скоротіть витрати на повернення до 85% завдяки 1-клік верифікації покупцем, Anti-Replay захисту та підтримці WooCommerce HPOS.'}
+              </p>
+
+              <div className="pt-2 flex flex-wrap gap-4">
+                <a 
+                  href="https://wordpress.org/plugins/sazcod-order-confirmation-for-woocommerce/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black font-extrabold text-sm flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition-all">
+                  <ExternalLink className="w-4 h-4 text-black" />
+                  <span>{lang === 'en' ? 'View on WordPress.org' : 'Дивитись на WordPress.org'}</span>
+                </a>
+                <button 
+                  onClick={() => onNavigate('/plugins/sazcod-order-confirmation')}
+                  className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold text-sm flex items-center gap-2 border border-emerald-500/30 transition-all">
+                  <span>{lang === 'en' ? 'Dedicated Landing Page' : 'Окрема сторінка плагіну'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <a 
+                  href="/sazcod-order-confirmation-for-woocommerce.zip" 
+                  download
+                  className="px-5 py-3.5 rounded-xl glass-panel hover:bg-slate-800 border border-white/10 text-white font-bold text-sm flex items-center gap-2 transition-all">
+                  <Download className="w-4 h-4 text-emerald-400" />
+                  <span>{lang === 'en' ? 'Direct .ZIP (v1.0.2)' : 'Завантажити .ZIP'}</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex justify-center">
+              <div 
+                onClick={() => onNavigate('/plugins/sazcod-order-confirmation')}
+                className="relative w-full max-w-[460px] rounded-2xl overflow-hidden border border-emerald-500/40 shadow-2xl bg-slate-950 cursor-pointer group">
+                <img 
+                  src="/cod/banner-772x250.png" 
+                  alt="SazCOD Banner" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-3 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+                  <span className="text-emerald-400 font-bold">🟢 Live on WordPress.org</span>
+                  <span className="text-slate-300 flex items-center gap-1 group-hover:text-emerald-300">
+                    Explore Details <ChevronRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Flagship Showroom Preview Section with Video - SazTicket */}
+      <section className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="glass-panel p-8 sm:p-12 rounded-[36px] border border-cyan-500/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-950 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
                 <ShieldCheck className="w-4 h-4" />
-                <span>FEATURED PRODUCT • v2.0.0 PRO READY</span>
+                <span>FEATURED PRODUCT • OFFICIAL WORDPRESS.ORG RELEASE (v2.1.1) • 72+ DOWNLOADS</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Quick QR Ticket Scanner & Gate Pass Pro
+                SazTicket – Event Ticket Check-in & Scanner
               </h2>
 
               <p className="text-base text-slate-300 leading-relaxed">
@@ -456,18 +544,26 @@ export default function HomePage({ lang, onNavigate }) {
               </p>
 
               <div className="pt-2 flex flex-wrap gap-4">
+                <a 
+                  href="https://wordpress.org/plugins/sazticket-event-ticket-scanner/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black font-extrabold text-sm flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition-all">
+                  <ExternalLink className="w-4 h-4 text-black" />
+                  <span>{lang === 'en' ? 'View on WordPress.org' : 'Дивитись на WordPress.org'}</span>
+                </a>
                 <button 
                   onClick={() => onNavigate('/plugins/quick-qr-scanner')}
-                  className="px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-sm flex items-center gap-2 shadow-lg shadow-cyan-500/20 transition-all">
-                  <span>{lang === 'en' ? 'View Dedicated Landing Page' : 'Окрема сторінка плагіну'}</span>
+                  className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold text-sm flex items-center gap-2 border border-cyan-500/30 transition-all">
+                  <span>{lang === 'en' ? 'Dedicated Landing Page' : 'Окрема сторінка плагіну'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <a 
-                  href="/quick-qr-ticket-scanner.zip" 
+                  href="/sazticket-event-ticket-scanner.zip" 
                   download
-                  className="px-6 py-3.5 rounded-xl glass-panel hover:bg-slate-800 border border-white/10 text-white font-bold text-sm flex items-center gap-2 transition-all">
+                  className="px-5 py-3.5 rounded-xl glass-panel hover:bg-slate-800 border border-white/10 text-white font-bold text-sm flex items-center gap-2 transition-all">
                   <Download className="w-4 h-4 text-cyan-400" />
-                  <span>{lang === 'en' ? 'Direct .ZIP Download' : 'Завантажити .ZIP'}</span>
+                  <span>{lang === 'en' ? 'Direct .ZIP (v2.1.1)' : 'Завантажити .ZIP'}</span>
                 </a>
               </div>
             </div>
@@ -543,12 +639,23 @@ export default function HomePage({ lang, onNavigate }) {
                   <span className="text-xs text-slate-400 block font-mono">Pro License</span>
                   <span className="text-lg font-bold text-white font-mono">{prod.price}</span>
                 </div>
-                <button 
-                  onClick={() => onNavigate('/plugins/quick-qr-scanner')}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 hover:bg-cyan-500 hover:text-black text-sm font-bold text-cyan-400 transition-all">
-                  <span>{lang === 'en' ? 'Open Product Page' : 'Окрема сторінка'}</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                {prod.link !== '#' ? (
+                  <button 
+                    onClick={() => onNavigate(prod.link)}
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-black text-sm font-bold text-emerald-400 transition-all">
+                    <span>{lang === 'en' ? 'Open Product Page' : 'Окрема сторінка'}</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <a 
+                    href="https://t.me/saz7771"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-xs font-mono text-slate-400 hover:text-white transition-all">
+                    <span>{lang === 'en' ? 'In Development' : 'У розробці'}</span>
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           ))}

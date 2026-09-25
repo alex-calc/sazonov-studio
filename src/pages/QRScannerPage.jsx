@@ -9,16 +9,13 @@ import {
   Check, 
   ExternalLink, 
   Lock, 
-  Star, 
   Layers, 
   Terminal, 
-  MessageSquare,
-  HelpCircle,
-  Clock,
-  Sparkles,
-  ArrowRight,
-  Code2,
-  CheckCircle2
+  MessageSquare, 
+  HelpCircle, 
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle2 
 } from '../components/Icons';
 
 export default function QRScannerPage({ lang, onNavigate }) {
@@ -26,10 +23,11 @@ export default function QRScannerPage({ lang, onNavigate }) {
 
   const content = {
     en: {
-      badge: "OFFICIAL PLUGIN RELEASE • v2.0.0 PRO ALL-IN-ONE",
-      title: "Quick QR Ticket Scanner & Telegram Gate Notifier",
+      badge: "🎉 OFFICIAL WORDPRESS.ORG RELEASE • SazTicket v2.1.1",
+      title: "SazTicket – Event Ticket Check-in & Scanner for WooCommerce",
       subtitle: "Turn any smartphone camera into a laser-guided access gate for clubs, VIP festivals, seminars, and exhibitions. Features W3C Screen Wake Lock, instant Telegram entrance check-ins, and anti-counterfeit duplicate alarm.",
-      btnDownload: "Download Free Plugin (.zip)",
+      btnWpOrg: "View on WordPress.org",
+      btnDownload: "Download Official Release (.zip)",
       btnBuyPro: "Get Pro License ($49/yr)",
       highlights: [
         { label: "Check-in Speed", val: "< 0.3 sec" },
@@ -150,10 +148,11 @@ export default function QRScannerPage({ lang, onNavigate }) {
       ]
     },
     ua: {
-      badge: "ОФІЦІЙНИЙ РЕЛІЗ ПЛАГІНУ • v2.0.0 PRO ALL-IN-ONE",
-      title: "Quick QR Ticket Scanner & Telegram Gate Notifier",
+      badge: "🎉 ОФІЦІЙНИЙ РЕЛІЗ НА WORDPRESS.ORG • SazTicket v2.1.1",
+      title: "SazTicket – Реєстрація та QR-сканер квитків для WooCommerce",
       subtitle: "Перетворіть камеру будь-якого смартфона на високошвидкісний лазерний турнікет для клубів, VIP-фестивалів, семінарів та виставок. Підтримує технологію W3C Screen Wake Lock, миттєві звіти проходів у Telegram та захист від підробок.",
-      btnDownload: "Завантажити безкоштовно (.zip)",
+      btnWpOrg: "Дивитись на WordPress.org",
+      btnDownload: "Завантажити офіційний реліз (.zip)",
       btnBuyPro: "Придбати Pro-ліцензію ($49/рік)",
       highlights: [
         { label: "Швидкість сканування", val: "< 0.3 сек" },
@@ -295,19 +294,39 @@ export default function QRScannerPage({ lang, onNavigate }) {
           {t.subtitle}
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
           <a 
-            href="/quick-qr-ticket-scanner.zip" 
-            download
+            href="https://wordpress.org/plugins/sazticket-event-ticket-scanner/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black font-extrabold text-base shadow-xl shadow-emerald-500/20 flex items-center gap-2 transition-all">
-            <Download className="w-5 h-5 text-black" />
+            <ExternalLink className="w-5 h-5 text-black" />
+            <span>{t.btnWpOrg}</span>
+          </a>
+          <a 
+            href="https://downloads.wordpress.org/plugin/sazticket-event-ticket-scanner.2.1.1.zip" 
+            download
+            className="px-6 py-4 rounded-xl glass-panel hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 font-bold text-base flex items-center gap-2 transition-all">
+            <Download className="w-5 h-5 text-emerald-400" />
             <span>{t.btnDownload}</span>
           </a>
           <a 
             href="#pricing"
-            className="px-8 py-4 rounded-xl glass-panel hover:bg-slate-800 border border-cyan-500/40 text-cyan-300 font-bold text-base flex items-center gap-2 transition-all">
+            className="px-6 py-4 rounded-xl glass-panel hover:bg-slate-800 border border-cyan-500/40 text-cyan-300 font-bold text-base flex items-center gap-2 transition-all">
             <Zap className="w-5 h-5 text-cyan-400" />
             <span>{t.btnBuyPro}</span>
+          </a>
+        </div>
+
+        <div className="flex items-center justify-center gap-2 text-xs text-slate-400 mb-12">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>{lang === 'en' ? 'Verified WordPress.org Publisher:' : 'Перевірений автор WordPress.org:'}</span>
+          <a 
+            href="https://profiles.wordpress.org/alexsazonov/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-cyan-400 hover:text-cyan-300 font-mono underline inline-flex items-center gap-1">
+            alexsazonov <ExternalLink className="w-3 h-3 inline" />
           </a>
         </div>
 
@@ -550,13 +569,21 @@ export default function QRScannerPage({ lang, onNavigate }) {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/5">
+            <div className="mt-8 pt-6 border-t border-white/5 space-y-2">
               <a 
-                href="/quick-qr-ticket-scanner.zip" 
+                href="https://wordpress.org/plugins/sazticket-event-ticket-scanner/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                <ExternalLink className="w-4 h-4" />
+                <span>{lang === 'en' ? 'WordPress.org Page' : 'Сторінка на WordPress.org'}</span>
+              </a>
+              <a 
+                href="https://downloads.wordpress.org/plugin/sazticket-event-ticket-scanner.2.1.1.zip" 
                 download
-                className="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
-                <Download className="w-4 h-4" />
-                <span>{lang === 'en' ? 'Download Free .ZIP' : 'Завантажити безкоштовно .ZIP'}</span>
+                className="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+                <Download className="w-3.5 h-3.5" />
+                <span>{lang === 'en' ? 'Direct .ZIP Download (v2.1.1)' : 'Пряме завантаження .ZIP (v2.1.1)'}</span>
               </a>
             </div>
           </div>

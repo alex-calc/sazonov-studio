@@ -33,13 +33,17 @@ export default function Header({ lang, setLang, currentPath, onNavigate }) {
         </div>
 
         {/* Center Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
           <button onClick={() => onNavigate('/')} className="hover:text-cyan-400 transition-colors">
             {lang === 'en' ? 'Studio Hub' : 'Головна'}
           </button>
           <button onClick={() => onNavigate('/plugins/quick-qr-scanner')} className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
-            <span>{lang === 'en' ? 'QR Ticket Scanner' : 'QR Сканер'}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v2.0</span>
+            <span>{lang === 'en' ? 'SazTicket' : 'SazTicket'}</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v2.1.1</span>
+          </button>
+          <button onClick={() => onNavigate('/plugins/sazcod-order-confirmation')} className="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+            <span>{lang === 'en' ? 'SazCOD' : 'SazCOD'}</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v1.0.2</span>
           </button>
           <button onClick={() => onNavigate('/#services')} className="hover:text-cyan-400 transition-colors">
             {lang === 'en' ? 'B2B Services' : 'Послуги'}
