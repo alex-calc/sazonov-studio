@@ -52,7 +52,32 @@ export default function App() {
         <p className="max-w-md mx-auto mb-4">
           Specialized commercial WordPress plugins, WooCommerce checkout accelerators, and high-frequency Telegram integrations.
         </p>
-        <p className="mb-2">© 2026 Sazonov Studio. All rights reserved. Powered by Clean PHP 8.3 & React.</p><p><a href="https://freelancehunt.com/freelancer/alex_saz.html" target="_blank" rel="noreferrer" class="text-cyan-400 hover:underline">Freelancehunt Verified Studio Profile (5.0 ⭐)</a></p>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-xs mb-4">
+          <a 
+            href="https://freelancehunt.com/freelancer/SmartCalc_UA.html" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors flex items-center gap-1">
+            <span>Freelancehunt Verified Profile (5.0 ⭐)</span>
+          </a>
+          <span className="text-slate-700">•</span>
+          <a 
+            href="https://profiles.wordpress.org/alexsazonov/" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors">
+            WordPress.org @alexsazonov
+          </a>
+          <span className="text-slate-700">•</span>
+          <a 
+            href="https://t.me/saz7771" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors">
+            Telegram @saz7771
+          </a>
+        </div>
+        <p>© 2026 Sazonov Studio. All rights reserved. Powered by Clean PHP 8.3 & React.</p>
       </footer>
     </div>
   );
