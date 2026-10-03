@@ -108,13 +108,13 @@ export default function HomePage({ lang, onNavigate }) {
         },
         {
           id: "messenger-dispatcher",
-          name: "Quick Order Notifier Telegram (SazTelegram)",
-          badge: "Releasing Early Oct",
-          badgeColor: "cyan",
-          category: "Telegram Automation",
-          desc: "Automated WooCommerce order dispatching directly to Telegram with interactive 1-click status change buttons and courier routing.",
+          name: "Saz Order Notifier with Telegram for WooCommerce",
+          badge: "Published on WordPress.org (v1.0.2)",
+          badgeColor: "emerald",
+          category: "Telegram Order Dispatcher",
+          desc: "Real-time WooCommerce order alerts in Telegram with 1-tap Confirm & Cancel inline buttons. 100% Day-1 HPOS compatibility with atomic MySQL concurrency locks.",
           price: "$39 / year",
-          link: "#"
+          link: "/plugins/saz-order-notifier"
         },
         {
           id: "deposit-payments",
@@ -239,13 +239,13 @@ export default function HomePage({ lang, onNavigate }) {
         },
         {
           id: "messenger-dispatcher",
-          name: "Quick Order Notifier Telegram (SazTelegram)",
-          badge: "Реліз на початку жовтня",
-          badgeColor: "cyan",
+          name: "Saz Order Notifier with Telegram для WooCommerce",
+          badge: "Опубліковано на WordPress.org (v1.0.2)",
+          badgeColor: "emerald",
           category: "Telegram Автоматизація",
-          desc: "Миттєва відправка структурованих сповіщень про нові замовлення у Telegram з інтерактивними кнопками зміни статусів.",
+          desc: "Миттєва відправка карток замовлень у Telegram з інтерактивними кнопками підтвердження та скасування в 1 клік. 100% сумісність з HPOS.",
           price: "$39 / рік",
-          link: "#"
+          link: "/plugins/saz-order-notifier"
         },
         {
           id: "deposit-payments",

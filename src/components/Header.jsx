@@ -45,6 +45,10 @@ export default function Header({ lang, setLang, currentPath, onNavigate }) {
             <span>{lang === 'en' ? 'SazCOD' : 'SazCOD'}</span>
             <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v1.0.2</span>
           </button>
+          <button onClick={() => onNavigate('/plugins/saz-order-notifier')} className="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+            <span>{lang === 'en' ? 'SazTelegram' : 'SazTelegram'}</span>
+            <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-400 font-mono font-bold border border-blue-500/30">v1.0.2</span>
+          </button>
           <button onClick={() => onNavigate('/#services')} className="hover:text-cyan-400 transition-colors">
             {lang === 'en' ? 'B2B Services' : 'Послуги'}
           </button>

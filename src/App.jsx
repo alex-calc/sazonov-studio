@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import QRScannerPage from './pages/QRScannerPage';
 import CODConfirmationPage from './pages/CODConfirmationPage';
+import OrderNotifierPage from './pages/OrderNotifierPage';
 import { QrCode } from './components/Icons';
 
 export default function App() {
@@ -35,6 +36,8 @@ export default function App() {
           <QRScannerPage lang={lang} onNavigate={handleNavigate} />
         ) : (currentPath === '/plugins/sazcod-order-confirmation' || currentPath === '/plugins/cod-confirmation') ? (
           <CODConfirmationPage lang={lang} onNavigate={handleNavigate} />
+        ) : (currentPath === '/plugins/saz-order-notifier' || currentPath === '/plugins/telegram-notifier' || currentPath === '/plugins/order-notifier') ? (
+          <OrderNotifierPage lang={lang} onNavigate={handleNavigate} />
         ) : (
           <HomePage lang={lang} onNavigate={handleNavigate} />
         )}
