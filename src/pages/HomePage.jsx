@@ -87,6 +87,26 @@ export default function HomePage({ lang, onNavigate }) {
       productsSubtitle: "Each plugin features dedicated architectural documentation, live test sandboxes, and clean PHP 8.3 & React codebases.",
       products: [
         {
+          id: "sazcancel-orders",
+          name: "SazCancel – Auto-Cancel On-Hold Orders for WooCommerce",
+          badge: "NEW • Published on WordPress.org (v1.0.0)",
+          badgeColor: "emerald",
+          category: "Inventory Restock & Automation",
+          desc: "Automatically cancel abandoned On-Hold orders (BACS bank transfers, cheques, offline invoices) under merchant-defined rules to release blocked inventory. Safe Dry Run simulation by default.",
+          price: "$49 / year",
+          link: "/plugins/sazcancel"
+        },
+        {
+          id: "sazstock-alerts",
+          name: "SazStock – Stock Alerts & Control for WooCommerce",
+          badge: "Published on WordPress.org (v1.0.0)",
+          badgeColor: "emerald",
+          category: "Real-Time Stock Radar",
+          desc: "Prevent unexpected stockouts with real-time inventory threshold monitors, instant Telegram dispatches, and automated safety buffers. 100% HPOS native.",
+          price: "$49 / year",
+          link: "/plugins/sazstock"
+        },
+        {
           id: "sazcod-confirmation",
           name: "SazCOD – COD Order Confirmation for WooCommerce",
           badge: "Published on WordPress.org (v1.0.2)",
@@ -109,7 +129,7 @@ export default function HomePage({ lang, onNavigate }) {
         {
           id: "messenger-dispatcher",
           name: "Saz Order Notifier with Telegram for WooCommerce",
-          badge: "Published on WordPress.org (v1.0.2)",
+          badge: "Published on WordPress.org (v1.0.0)",
           badgeColor: "emerald",
           category: "Telegram Order Dispatcher",
           desc: "Real-time WooCommerce order alerts in Telegram with 1-tap Confirm & Cancel inline buttons. 100% Day-1 HPOS compatibility with atomic MySQL concurrency locks.",
@@ -117,23 +137,13 @@ export default function HomePage({ lang, onNavigate }) {
           link: "/plugins/saz-order-notifier"
         },
         {
-          id: "deposit-payments",
-          name: "Self-Hosted Partial Deposit & Booking Payments",
-          badge: "In Research",
-          badgeColor: "purple",
-          category: "Fintech & Bookings",
-          desc: "Eliminate 5% SaaS booking fees. Direct partial deposit and balance collection with Stripe, Apple Pay, PayPal & Monobank.",
-          price: "$59 / year",
-          link: "#"
-        },
-        {
-          id: "volume-discounts",
-          name: "Smart Tiered B2B Volume Discount Table",
-          badge: "In Research",
-          badgeColor: "amber",
-          category: "B2B Wholesale",
-          desc: "Dynamic live tier pricing matrix on product pages with instant AJAX subtotal recalculation for wholesale bulk orders.",
-          price: "$45 / year",
+          id: "sazpick-packing",
+          name: "SazPick – Barcode Order Packing & Pick Verification",
+          badge: "Sprint #6 • In Development",
+          badgeColor: "cyan",
+          category: "Warehouse Fulfillment",
+          desc: "Server-authoritative pick & pack verification. USB barcode wedge & smartphone camera scanner to eliminate warehouse packing mistakes before sealing boxes.",
+          price: "$49 / year",
           link: "#"
         }
       ],
@@ -218,6 +228,26 @@ export default function HomePage({ lang, onNavigate }) {
       productsSubtitle: "Для кожного плагіна ми створюємо окрему сторінку з детальною архітектурою, живими демо та чистим кодом PHP 8.3.",
       products: [
         {
+          id: "sazcancel-orders",
+          name: "SazCancel – Авто-скасування завислих On-Hold замовлень",
+          badge: "НОВИНКА • Опубліковано на WordPress.org (v1.0.0)",
+          badgeColor: "emerald",
+          category: "Розблокування залишків",
+          desc: "Автоматично скасовуйте неоплачені замовлення у статусі On-Hold (банківські перекази BACS, чеки, рахунки) та повертайте заблоковані залишки на склад. Безпечний режим симуляції (Dry Run) за замовчуванням.",
+          price: "$49 / рік",
+          link: "/plugins/sazcancel"
+        },
+        {
+          id: "sazstock-alerts",
+          name: "SazStock – Контроль залишків та сповіщення для WooCommerce",
+          badge: "Опубліковано на WordPress.org (v1.0.0)",
+          badgeColor: "emerald",
+          category: "Радар залишків у реальному часі",
+          desc: "Запобігайте неочікуваному закінченню товарів завдяки моніторингу критичних залишків у реальному часі, миттєвим сповіщенням у Telegram та складським буферам. 100% HPOS нативно.",
+          price: "$49 / рік",
+          link: "/plugins/sazstock"
+        },
+        {
           id: "sazcod-confirmation",
           name: "SazCOD – Підтвердження післяплати для WooCommerce",
           badge: "Опубліковано на WordPress.org (v1.0.2)",
@@ -240,7 +270,7 @@ export default function HomePage({ lang, onNavigate }) {
         {
           id: "messenger-dispatcher",
           name: "Saz Order Notifier with Telegram для WooCommerce",
-          badge: "Опубліковано на WordPress.org (v1.0.2)",
+          badge: "Опубліковано на WordPress.org (v1.0.0)",
           badgeColor: "emerald",
           category: "Telegram Автоматизація",
           desc: "Миттєва відправка карток замовлень у Telegram з інтерактивними кнопками підтвердження та скасування в 1 клік. 100% сумісність з HPOS.",
@@ -248,23 +278,13 @@ export default function HomePage({ lang, onNavigate }) {
           link: "/plugins/saz-order-notifier"
         },
         {
-          id: "deposit-payments",
-          name: "Self-Hosted Partial Deposit & Booking Payments",
-          badge: "У дослідженні",
-          badgeColor: "purple",
-          category: "Фінтех та Бронювання",
-          desc: "Економія 5% комісій сторонніх сервісів. Прийом передоплати та решти через Stripe, Apple Pay, PayPal та Monobank.",
-          price: "$59 / рік",
-          link: "#"
-        },
-        {
-          id: "volume-discounts",
-          name: "Smart Tiered B2B Volume Discount Table",
-          badge: "У дослідженні",
-          badgeColor: "amber",
-          category: "B2B Опт",
-          desc: "Динамічна таблиця оптових знижок на сторінці товару з миттєвим AJAX-перерахунком вартості партії.",
-          price: "$45 / рік",
+          id: "sazpick-packing",
+          name: "SazPick – Сканер штрихкодів та перевірка комплектації",
+          badge: "Спринт #6 • У розробці",
+          badgeColor: "cyan",
+          category: "Комплектація та склад",
+          desc: "Серверна верифікація збірки замовлень. Ручні USB-сканери та камера смартфона для виключення помилок комплектації перед заклеюванням коробок.",
+          price: "$49 / рік",
           link: "#"
         }
       ],
@@ -507,6 +527,74 @@ export default function HomePage({ lang, onNavigate }) {
                 <img 
                   src="/cod/banner-772x250.png" 
                   alt="SazCOD Banner" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-3 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+                  <span className="text-emerald-400 font-bold">🟢 Live on WordPress.org</span>
+                  <span className="text-slate-300 flex items-center gap-1 group-hover:text-emerald-300">
+                    Explore Details <ChevronRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Flagship Showroom Preview Section - SazCancel */}
+      <section className="relative z-10 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/5">
+        <div className="glass-panel p-8 sm:p-12 rounded-[36px] border border-emerald-500/30 bg-gradient-to-br from-[#021f18]/50 via-[#020617] to-[#041d14]/30 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-950 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
+                <Sparkles className="w-4 h-4" />
+                <span>🎉 NEW RELEASE TODAY • OFFICIAL WORDPRESS.ORG (v1.0.0) • HPOS NATIVE</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                SazCancel – Auto-Cancel On-Hold Orders
+              </h2>
+
+              <p className="text-base text-slate-300 leading-relaxed">
+                {lang === 'en'
+                  ? 'Automatically cancel abandoned On-Hold orders (BACS bank transfers, cheques, offline invoices) under merchant-defined rules to safely release stuck inventory back to shelves. Features built-in Dry Run simulation mode by default.'
+                  : 'Автоматично скасовуйте завислі замовлення в статусі On-Hold (банківські перекази BACS, чеки, рахунки) та повертайте заблоковані товари на склад за вашими правилами. Безпечний режим симуляції (Dry Run) увімкнено за замовчуванням.'}
+              </p>
+
+              <div className="pt-2 flex flex-wrap gap-4">
+                <a 
+                  href="https://wordpress.org/plugins/sazcancel-auto-cancel-on-hold-orders/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-black font-extrabold text-sm flex items-center gap-2 shadow-lg shadow-emerald-500/20 transition-all">
+                  <ExternalLink className="w-4 h-4 text-black" />
+                  <span>{lang === 'en' ? 'View on WordPress.org' : 'Дивитись на WordPress.org'}</span>
+                </a>
+                <button 
+                  onClick={() => onNavigate('/plugins/sazcancel')}
+                  className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-300 font-bold text-sm flex items-center gap-2 border border-emerald-500/30 transition-all">
+                  <span>{lang === 'en' ? 'Dedicated Landing Page' : 'Окрема сторінка плагіну'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <a 
+                  href="/sazcancel-auto-cancel-on-hold-orders.zip" 
+                  download
+                  className="px-5 py-3.5 rounded-xl glass-panel hover:bg-slate-800 border border-white/10 text-white font-bold text-sm flex items-center gap-2 transition-all">
+                  <Download className="w-4 h-4 text-emerald-400" />
+                  <span>{lang === 'en' ? 'Direct .ZIP (v1.0.0)' : 'Завантажити .ZIP'}</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex justify-center">
+              <div 
+                onClick={() => onNavigate('/plugins/sazcancel')}
+                className="relative w-full max-w-[460px] rounded-2xl overflow-hidden border border-emerald-500/40 shadow-2xl bg-slate-950 cursor-pointer group">
+                <img 
+                  src="/sazcancel/banner-772x250.png" 
+                  alt="SazCancel Banner" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="p-3 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between text-xs font-mono">

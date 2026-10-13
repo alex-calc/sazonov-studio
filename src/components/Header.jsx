@@ -33,27 +33,29 @@ export default function Header({ lang, setLang, currentPath, onNavigate }) {
         </div>
 
         {/* Center Nav Links */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-medium text-slate-300">
           <button onClick={() => onNavigate('/')} className="hover:text-cyan-400 transition-colors">
-            {lang === 'en' ? 'Studio Hub' : 'Головна'}
+            {lang === 'en' ? 'Hub' : 'Головна'}
           </button>
-          <button onClick={() => onNavigate('/plugins/quick-qr-scanner')} className="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
-            <span>{lang === 'en' ? 'SazTicket' : 'SazTicket'}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v2.1.1</span>
+          <button onClick={() => onNavigate('/plugins/quick-qr-scanner')} className="hover:text-cyan-400 transition-colors flex items-center gap-1">
+            <span>SazTicket</span>
           </button>
-          <button onClick={() => onNavigate('/plugins/sazcod-order-confirmation')} className="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
-            <span>{lang === 'en' ? 'SazCOD' : 'SazCOD'}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">v1.0.2</span>
+          <button onClick={() => onNavigate('/plugins/sazcod-order-confirmation')} className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+            <span>SazCOD</span>
           </button>
-          <button onClick={() => onNavigate('/plugins/saz-order-notifier')} className="hover:text-blue-400 transition-colors flex items-center gap-1.5">
-            <span>{lang === 'en' ? 'SazTelegram' : 'SazTelegram'}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-400 font-mono font-bold border border-blue-500/30">v1.0.2</span>
+          <button onClick={() => onNavigate('/plugins/saz-order-notifier')} className="hover:text-blue-400 transition-colors flex items-center gap-1">
+            <span>SazNotify</span>
           </button>
-          <button onClick={() => onNavigate('/#services')} className="hover:text-cyan-400 transition-colors">
+          <button onClick={() => onNavigate('/plugins/sazstock')} className="hover:text-amber-400 transition-colors flex items-center gap-1">
+            <span>SazStock</span>
+            <span className="text-[9px] px-1 py-0.5 rounded bg-amber-950 text-amber-400 font-mono font-bold border border-amber-500/30">v1.0</span>
+          </button>
+          <button onClick={() => onNavigate('/plugins/sazcancel')} className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+            <span>SazCancel</span>
+            <span className="text-[9px] px-1 py-0.5 rounded bg-emerald-950 text-emerald-400 font-mono font-bold border border-emerald-500/30">NEW</span>
+          </button>
+          <button onClick={() => onNavigate('/#services')} className="hover:text-cyan-400 transition-colors text-xs text-slate-400">
             {lang === 'en' ? 'B2B Services' : 'Послуги'}
-          </button>
-          <button onClick={() => onNavigate('/#contact')} className="hover:text-cyan-400 transition-colors">
-            {lang === 'en' ? 'Custom Quote' : 'Замовити'}
           </button>
         </nav>
 

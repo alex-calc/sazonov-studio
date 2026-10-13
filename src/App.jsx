@@ -4,6 +4,8 @@ import HomePage from './pages/HomePage';
 import QRScannerPage from './pages/QRScannerPage';
 import CODConfirmationPage from './pages/CODConfirmationPage';
 import OrderNotifierPage from './pages/OrderNotifierPage';
+import SazStockPage from './pages/SazStockPage';
+import SazCancelPage from './pages/SazCancelPage';
 import { QrCode } from './components/Icons';
 
 export default function App() {
@@ -38,6 +40,10 @@ export default function App() {
           <CODConfirmationPage lang={lang} onNavigate={handleNavigate} />
         ) : (currentPath === '/plugins/saz-order-notifier' || currentPath === '/plugins/telegram-notifier' || currentPath === '/plugins/order-notifier') ? (
           <OrderNotifierPage lang={lang} onNavigate={handleNavigate} />
+        ) : (currentPath === '/plugins/sazstock-stock-alerts' || currentPath === '/plugins/sazstock') ? (
+          <SazStockPage lang={lang} onNavigate={handleNavigate} />
+        ) : (currentPath === '/plugins/sazcancel-auto-cancel' || currentPath === '/plugins/sazcancel') ? (
+          <SazCancelPage lang={lang} onNavigate={handleNavigate} />
         ) : (
           <HomePage lang={lang} onNavigate={handleNavigate} />
         )}
